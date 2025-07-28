@@ -1,0 +1,12 @@
+jaffle_shop:  # This must match the `profile` field in dbt_project.yml
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: your_db_host
+      user: your_db_user
+      password: your_db_password
+      port: 5432
+      dbname: your_db_name
+      schema: your_db_schema  # this is the schema where dbt will build models
+      threads: 1
